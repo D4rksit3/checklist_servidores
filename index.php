@@ -24,7 +24,7 @@ for ($j=0; $j < $i; $j++) {
     echo $status;//0 ok, 1 error
 }
  */
-header("refresh:8");
+header("refresh:60");
 $iplist = array(
     array("10.200.2.5", "PC_01"),
     array("192.168.1.1", "PC_02"),
@@ -35,7 +35,7 @@ $results = [];
 
 for ($j=0; $j < $i; $j++) { 
     $ip = $iplist[$j][0];
-    $ping = exec("ping -n 1 $ip",$output,$status);
+    $ping = exec("ping $ip",$output,$status);
     
     /* echo "Ping".$iplist[$j][0].$iplist[$j][1].": "; */
     $results [] = $status;
