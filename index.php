@@ -24,7 +24,7 @@ for ($j=0; $j < $i; $j++) {
     echo $status;//0 ok, 1 error
 }
  */
-header("refresh:5");
+header("refresh:8");
 $iplist = array(
     array("10.200.2.5", "PC_01"),
     array("192.168.1.1", "PC_02"),
@@ -61,7 +61,7 @@ foreach ($results as $item => $k) {
     }else{
         echo "<td><a class='btn btn-danger'>Desconectado</a></td>";
         echo "<td>".$iplist[$item][0]."</td>";
-       /*  ini_set( 'display_errors', 1 );
+        ini_set( 'display_errors', 1 );
         error_reporting( E_ALL );
         $from = "gonzaloroque21@gmail.com";
         $to = "gonzaloroque21@gmail.com";
@@ -74,7 +74,7 @@ foreach ($results as $item => $k) {
         $headers = 'MIME-Version: 1.0' . "\r\n";
         $headers .= 'Content-type: text/html; charset=utf-8' . "\r\n";
         $headers .= "From:" . $from;
-        mail($to,$subject,$message, $headers); */
+        mail($to,$subject,$message, $headers); 
        
 }
 
